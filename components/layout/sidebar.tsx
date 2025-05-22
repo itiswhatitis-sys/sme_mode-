@@ -42,24 +42,24 @@ export function Sidebar({ open, setOpen }: SidebarProps) {
       icon: Home,
       section: "general",
     },
-    {
-      title: "Ecosystem Hiring",
-      href: "/ecosystem",
-      icon: Briefcase,
-      section: "hiring",
-    },
-    {
-      title: "Non-Ecosystem",
-      href: "/non-ecosystem",
-      icon: Building2,
-      section: "hiring",
-    },
-    {
-      title: "Lateral Hiring",
-      href: "/lateral",
-      icon: Bot,
-      section: "hiring",
-    },
+    // {
+    //   title: "Ecosystem Hiring",
+    //   href: "/ecosystem",
+    //   icon: Briefcase,
+    //   section: "hiring",
+    // },
+    // {
+    //   title: "Non-Ecosystem",
+    //   href: "/non-ecosystem",
+    //   icon: Building2,
+    //   section: "hiring",
+    // },
+    // {
+    //   title: "Lateral Hiring",
+    //   href: "/lateral",
+    //   icon: Bot,
+    //   section: "hiring",
+    // },
     {
       title: "Assessments",
       href: "/assessments",
@@ -90,6 +90,12 @@ export function Sidebar({ open, setOpen }: SidebarProps) {
       icon: Calendar,
       section: "tools",
     },
+     {
+      title: "Interboard",
+      href: "/interboard",
+      icon:  Briefcase,
+      section: "tools",
+    },
     {
       title: "Analytics",
       href: "/analytics",
@@ -100,7 +106,7 @@ export function Sidebar({ open, setOpen }: SidebarProps) {
 
   const sections = [
     { id: "general", title: "General" },
-    { id: "hiring", title: "Hiring Models" },
+    // { id: "hiring", title: "Hiring Models" },
     { id: "tools", title: "Tools" },
   ];
 
