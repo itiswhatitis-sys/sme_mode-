@@ -353,12 +353,19 @@ export const mockAnalytics: AnalyticsData = {
   offersExtended: 42,
   acceptanceRate: 85,
   averageTimeToHire: 28,
-  sourceBreakdown: [
-    { name: 'University Portal', value: 45 },
-    { name: 'Company Website', value: 25 },
-    { name: 'LinkedIn', value: 15 },
-    { name: 'Job Fairs', value: 10 },
-    { name: 'Employee Referrals', value: 5 },
+  departmentBreakdown: [
+    { name: 'Computer Science', value: 40 },
+    { name: 'Electronics', value: 25 },
+    { name: 'Mechanical', value: 15 },
+    { name: 'Civil', value: 10 },
+    { name: 'Electrical', value: 10 },
+  ],
+  placementByDepartment: [
+    { name: 'Computer Science', placed: 35, notPlaced: 5 },
+    { name: 'Electronics', placed: 20, notPlaced: 5 },
+    { name: 'Mechanical', placed: 10, notPlaced: 5 },
+    { name: 'Civil', placed: 7, notPlaced: 3 },
+    { name: 'Electrical', placed: 8, notPlaced: 2 },
   ],
   skillDistribution: [
     { name: 'JavaScript', value: 28 },
@@ -374,7 +381,7 @@ export const mockAnalytics: AnalyticsData = {
     { name: 'Not Started', value: 10 },
     { name: 'Timed Out', value: 10 },
   ],
-  monthlyHires: [
+    monthlyHires: [
     { name: 'Jan', value: 4 },
     { name: 'Feb', value: 6 },
     { name: 'Mar', value: 8 },

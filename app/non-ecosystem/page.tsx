@@ -453,7 +453,7 @@ export default function NonEcosystemHiring() {
             <ChartCard
               title="Source Breakdown"
               type="pie"
-              data={mockAnalytics.sourceBreakdown}
+              data={mockAnalytics.departmentBreakdown}
               height={240}
             />
           </div>

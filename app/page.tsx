@@ -26,7 +26,7 @@ export default function Dashboard() {
         <div>
           <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
           <p className="text-muted-foreground">
-            An overview of your recruitment activities
+           An overview of your Placement activities
           </p>
         </div>
         <div className="flex items-center gap-4">
@@ -65,42 +65,43 @@ export default function Dashboard() {
       </div>
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <ChartCard
-          title="Monthly Hires"
-          type="bar"
-          data={mockAnalytics.monthlyHires}
-          height={240}
-          className="lg:col-span-2"
-        />
-        <ChartCard
-          title="Source Breakdown"
-          type="pie"
-          data={mockAnalytics.sourceBreakdown}
-          height={240}
-        />
+       <ChartCard
+        title="Placed vs Not Placed (Dept-wise)"
+        type="bar"
+        data={mockAnalytics.placementByDepartment}
+        height={240}
+        className="lg:col-span-2"
+      />
+       <ChartCard
+        title="Department Breakdown"
+        type="pie"
+        data={mockAnalytics.departmentBreakdown}
+        height={240}
+      />
       </div>
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <div className="space-y-6 lg:col-span-2">
-          <h2 className="text-xl font-semibold">Active Recruitment Drives</h2>
-          <div className="grid gap-6 md:grid-cols-2">
-            {mockDrives
-              .filter((drive) => drive.status === "active")
-              .map((drive) => (
-                <DriveCard key={drive.id} drive={drive} />
-              ))}
-          </div>
-        </div>
+  <div className="space-y-6 lg:col-span-3">
+    <h2 className="text-xl font-semibold">Active Recruitment Drives</h2>
+    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {mockDrives
+        .filter((drive) => drive.status === "active")
+        .map((drive) => (
+          <DriveCard key={drive.id} drive={drive} />
+        ))}
+    </div>
+  </div>
 
-        <div className="space-y-6">
-          <UpcomingEvents />
-        </div>
-      </div>
+  {/* Make UpcomingEvents span all 3 columns */}
+  <div className="space-y-6 lg:col-span-3">
+    <UpcomingEvents />
+  </div>
+</div>
 
       <div className="grid gap-6 md:grid-cols-2">
         <RecentActivity />
         <ChartCard
-          title="Skill Distribution"
+          title="Skill"
           type="pie"
           data={mockAnalytics.skillDistribution}
           height={300}

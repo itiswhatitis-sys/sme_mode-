@@ -70,7 +70,7 @@ export type AnalyticsData = {
   offersExtended: number;
   acceptanceRate: number;
   averageTimeToHire: number;
-  sourceBreakdown: {
+  departmentBreakdown: {
     name: string;
     value: number;
   }[];
@@ -82,8 +82,14 @@ export type AnalyticsData = {
     name: string;
     value: number;
   }[];
-  monthlyHires: {
+  placementByDepartment: {
+  name: string;
+  placed: number;
+  notPlaced: number;
+}[];
+ monthlyHires: {
     name: string;
     value: number;
   }[];
+
 };

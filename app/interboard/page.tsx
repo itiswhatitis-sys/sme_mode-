@@ -1,6 +1,7 @@
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin } from "lucide-react";
+import Link from "next/link";
 
 export default function Interboard() {
   return (
@@ -83,7 +84,9 @@ export default function Interboard() {
             <div className="flex items-center text-sm text-muted-foreground gap-4">
               {job.salary} <MapPin className="w-4 h-4 ml-2" /> {job.location}
             </div>
-            <Button className="self-start mt-2">View Details</Button>
+            <Link href="/interboard/viewdetails">
+  <Button className="self-start mt-2">View Details</Button>
+</Link>
           </div>
         ))}
       </div>

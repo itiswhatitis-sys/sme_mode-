@@ -35,80 +35,56 @@ type SidebarProps = {
 export function Sidebar({ open, setOpen }: SidebarProps) {
   const pathname = usePathname();
 
-  const routes = [
-    {
-      title: "Dashboard",
-      href: "/",
-      icon: Home,
-      section: "general",
-    },
-    // {
-    //   title: "Ecosystem Hiring",
-    //   href: "/ecosystem",
-    //   icon: Briefcase,
-    //   section: "hiring",
-    // },
-    // {
-    //   title: "Non-Ecosystem",
-    //   href: "/non-ecosystem",
-    //   icon: Building2,
-    //   section: "hiring",
-    // },
-    // {
-    //   title: "Lateral Hiring",
-    //   href: "/lateral",
-    //   icon: Bot,
-    //   section: "hiring",
-    // },
-    {
-      title: "Assessments",
-      href: "/assessments",
-      icon: BookOpen,
-      section: "tools",
-    },
-    {
-      title: "Recruitment Drives",
-      href: "/drives",
-      icon: Award,
-      section: "tools",
-    },
-    {
-      title: "Candidates",
-      href: "/candidates",
-      icon: Users,
-      section: "tools",
-    },
-    {
-      title: "Applications",
-      href: "/applications",
-      icon: FileText,
-      section: "tools",
-    },
-    {
-      title: "Calendar",
-      href: "/calendar",
-      icon: Calendar,
-      section: "tools",
-    },
-     {
-      title: "Interboard",
-      href: "/interboard",
-      icon:  Briefcase,
-      section: "tools",
-    },
-    {
-      title: "Analytics",
-      href: "/analytics",
-      icon: BarChart2,
-      section: "tools",
-    }
-  ];
+ const routes = [
+  {
+    title: "Dashboard",
+    href: "/",
+    icon: Home,
+    section: "general",
+  },
+  {
+    title: "Assessments",
+    href: "/assessments",
+    icon: BookOpen,
+    section: "recruitment",
+  },
+  {
+    title: "Recruitment Drives",
+    href: "/drives",
+    icon: Award,
+    section: "recruitment",
+  },
+  {
+    title: "Candidates",
+    href: "/candidates",
+    icon: Users,
+    section: "recruitment",
+  },
+  {
+    title: "Calendar",
+    href: "/calendar",
+    icon: Calendar,
+    section: "management",
+  },
+  {
+    title: "Interboard",
+    href: "/interboard",
+    icon: Briefcase,
+    section: "management",
+  },
+  {
+    title: "Analytics",
+    href: "/analytics",
+    icon: BarChart2,
+    section: "management",
+  },
+];
 
-  const sections = [
-    { id: "general", title: "General" },
-    // { id: "hiring", title: "Hiring Models" },
-    { id: "tools", title: "Tools" },
-  ];
+const sections = [
+  { id: "general", title: "General" },
+  { id: "recruitment", title: "Recruitment" },
+  { id: "management", title: "Management" },
+];
 
   return (
     <div
