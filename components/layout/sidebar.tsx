@@ -26,7 +26,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { Separator } from "@/components/ui/separator";
-
+import Image from 'next/image';
 type SidebarProps = {
   open: boolean;
   setOpen: (open: boolean) => void;
@@ -89,7 +89,7 @@ const sections = [
   return (
     <div
       className={cn(
-        "fixed h-screen bg-white shadow-sm transition-all duration-300 dark:bg-gray-950 z-30 overflow-y-auto",
+        "fixed h-screen bg-white shadow-sm transition-all duration-300 dark:bg-black z-30 overflow-y-auto",
         open ? "w-64" : "w-20"
       )}
     >
@@ -98,7 +98,9 @@ const sections = [
           {open ? (
             <div className="flex items-center">
               <Layers className="h-6 w-6 text-blue-700" />
-              <span className="ml-2 font-semibold text-lg">SME Hiring</span>
+             <span className="ml-6">
+            <Image src="/new_logo.png" alt="SME Logo" width={130} height={2}  />
+          </span>
             </div>
           ) : (
             <Layers className="h-6 w-6 text-blue-700 mx-auto" />

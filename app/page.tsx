@@ -66,7 +66,7 @@ export default function Dashboard() {
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
        <ChartCard
-        title="Placed vs Not Placed (Dept-wise)"
+        title="Department-wise"
         type="bar"
         data={mockAnalytics.placementByDepartment}
         height={240}

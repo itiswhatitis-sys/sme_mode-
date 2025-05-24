@@ -18,14 +18,14 @@ interface Candidate {
   name: string;
   regNumber: string;
   dept: string;
-  status: 'Selected' | 'Rejected' | 'In Progress';
+  status: 'Active' | 'Inactive' | 'NA';
 }
 
 const defaultData: Candidate[] = [
-  { id: '1', name: 'Murali', regNumber: 'REG001', dept: 'Computer Science', status: 'In Progress' },
-  { id: '2', name: 'Gowtham', regNumber: 'REG002', dept: 'Information Tech', status: 'Selected' },
-  { id: '3', name: 'Monish', regNumber: 'REG003', dept: 'Electrical Engg', status: 'In Progress' },
-  { id: '4', name: 'vijayraj', regNumber: 'REG004', dept: 'Mechanical Engg', status: 'Rejected' }
+  { id: '1', name: 'Murali', regNumber: 'REG001', dept: 'Computer Science', status: 'Active' },
+  { id: '2', name: 'Gowtham', regNumber: 'REG002', dept: 'Information Tech', status: 'Inactive' },
+  { id: '3', name: 'Monish', regNumber: 'REG003', dept: 'Electrical Engg', status: 'NA' },
+  { id: '4', name: 'vijayraj', regNumber: 'REG004', dept: 'Mechanical Engg', status: 'Inactive' }
 ];
 
 const CandidatesTable = () => {
@@ -57,9 +57,9 @@ const CandidatesTable = () => {
       cell: ({ row }) => {
         const status = row.getValue('status') as Candidate['status'];
         const colorMap = {
-          Selected: 'bg-green-500',
-          Rejected: 'bg-red-500',
-          'In Progress': 'bg-blue-500'
+          Active: 'bg-green-500',
+          Inactive: 'bg-red-500',
+          NA: 'bg-blue-500'
         };
         return (
           <span className={`px-2 py-1 text-xs font-medium rounded-full text-white ${colorMap[status]}`}>
