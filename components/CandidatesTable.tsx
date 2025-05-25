@@ -25,8 +25,30 @@ const defaultData: Candidate[] = [
   { id: '1', name: 'Murali', regNumber: 'REG001', dept: 'Computer Science', status: 'Active' },
   { id: '2', name: 'Gowtham', regNumber: 'REG002', dept: 'Information Tech', status: 'Inactive' },
   { id: '3', name: 'Monish', regNumber: 'REG003', dept: 'Electrical Engg', status: 'NA' },
-  { id: '4', name: 'vijayraj', regNumber: 'REG004', dept: 'Mechanical Engg', status: 'Inactive' }
+  { id: '4', name: 'Vijayraj', regNumber: 'REG004', dept: 'Mechanical Engg', status: 'Inactive' },
+  { id: '5', name: 'Sahana', regNumber: 'REG005', dept: 'Civil Engg', status: 'Active' },
+  { id: '6', name: 'Aakash', regNumber: 'REG006', dept: 'Computer Science', status: 'NA' },
+  { id: '7', name: 'Divya', regNumber: 'REG007', dept: 'Electronics', status: 'Active' },
+  { id: '8', name: 'Karthik', regNumber: 'REG008', dept: 'Information Tech', status: 'Inactive' },
+  { id: '9', name: 'Sneha', regNumber: 'REG009', dept: 'Mechanical Engg', status: 'Active' },
+  { id: '10', name: 'Pranav', regNumber: 'REG010', dept: 'Electrical Engg', status: 'NA' },
+  { id: '11', name: 'Lavanya', regNumber: 'REG011', dept: 'Computer Science', status: 'Active' },
+  { id: '12', name: 'Yogesh', regNumber: 'REG012', dept: 'Civil Engg', status: 'Inactive' },
+  { id: '13', name: 'Harini', regNumber: 'REG013', dept: 'Electronics', status: 'Active' },
+  { id: '14', name: 'Manoj', regNumber: 'REG014', dept: 'Mechanical Engg', status: 'Inactive' },
+  { id: '15', name: 'Revathi', regNumber: 'REG015', dept: 'Information Tech', status: 'Active' },
+  { id: '16', name: 'Arjun', regNumber: 'REG016', dept: 'Electrical Engg', status: 'NA' },
+  { id: '17', name: 'Sathya', regNumber: 'REG017', dept: 'Civil Engg', status: 'Inactive' },
+  { id: '18', name: 'Deepak', regNumber: 'REG018', dept: 'Computer Science', status: 'Active' },
+  { id: '19', name: 'Meena', regNumber: 'REG019', dept: 'Mechanical Engg', status: 'NA' },
+  { id: '20', name: 'Vikram', regNumber: 'REG020', dept: 'Information Tech', status: 'Active' },
+  { id: '21', name: 'Anjali', regNumber: 'REG021', dept: 'Electronics', status: 'Inactive' },
+  { id: '22', name: 'Rakesh', regNumber: 'REG022', dept: 'Civil Engg', status: 'Active' },
+  { id: '23', name: 'Shruti', regNumber: 'REG023', dept: 'Electrical Engg', status: 'Inactive' },
+  { id: '24', name: 'Dinesh', regNumber: 'REG024', dept: 'Computer Science', status: 'Active' },
+  { id: '25', name: 'Bhavya', regNumber: 'REG025', dept: 'Information Tech', status: 'NA' }
 ];
+
 
 const CandidatesTable = () => {
   const [data] = useState<Candidate[]>(defaultData);

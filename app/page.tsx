@@ -96,8 +96,8 @@ export default function Dashboard() {
             <Tooltip />
             <Legend />
             <CartesianGrid strokeDasharray="3 3" />
-            <Bar dataKey="Placed" stackId="a" fill="#3b82f6" />
-            <Bar dataKey="Not Placed" stackId="a" fill="#60a5fa" />
+            <Bar dataKey="Placed" stackId="a" fill="#eb6841" />
+            <Bar dataKey="Not Placed" stackId="a" fill="#f7b267" />
           </BarChart>
         </ResponsiveContainer>
       </CardContent>
