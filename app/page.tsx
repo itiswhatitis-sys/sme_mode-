@@ -11,6 +11,16 @@ import {
   UserPlus, 
   Award 
 } from "lucide-react";
+import {
+  Bar,
+  BarChart,
+  CartesianGrid,
+  Legend,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from 'recharts'
 import { Button } from "@/components/ui/button";
 import { StatCard } from "@/components/ui/dashboard/stat-card";
 import { ChartCard } from "@/components/ui/dashboard/chart-card";
@@ -18,8 +28,16 @@ import { DriveCard } from "@/components/ui/dashboard/drive-card";
 import { RecentActivity } from "@/components/ui/dashboard/recent-activity";
 import { UpcomingEvents } from "@/components/ui/dashboard/upcoming-events";
 import { mockDrives, mockAnalytics } from "@/lib/mockData";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function Dashboard() {
+  const data = [
+  { department: 'CSE', Placed: 80, 'Not Placed': 20 },
+  { department: 'IT', Placed: 70, 'Not Placed': 30 },
+  { department: 'ECE', Placed: 60, 'Not Placed': 40 },
+  { department: 'EEE', Placed: 50, 'Not Placed': 50 },
+  { department: 'MECH', Placed: 30, 'Not Placed': 70 },
+]
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
@@ -65,13 +83,25 @@ export default function Dashboard() {
       </div>
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-       <ChartCard
-        title="Department-wise"
-        type="bar"
-        data={mockAnalytics.placementByDepartment}
-        height={240}
-        className="lg:col-span-2"
-      />
+        <Card className="h-240 lg:col-span-2">
+      <CardHeader className="pb-2">
+        <CardTitle className="text-base">Placement Chart - Department-wise</CardTitle>
+        <p className="text-sm text-muted-foreground">2024 Batch</p>
+      </CardHeader>
+      <CardContent className="pl-2">
+        <ResponsiveContainer width="100%" height={240}>
+          <BarChart data={data}  barCategoryGap={40}>
+            <XAxis dataKey="department" />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <CartesianGrid strokeDasharray="3 3" />
+            <Bar dataKey="Placed" stackId="a" fill="#3b82f6" />
+            <Bar dataKey="Not Placed" stackId="a" fill="#60a5fa" />
+          </BarChart>
+        </ResponsiveContainer>
+      </CardContent>
+    </Card>
        <ChartCard
         title="Department Breakdown"
         type="pie"
