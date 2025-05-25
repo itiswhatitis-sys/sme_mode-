@@ -231,7 +231,7 @@ export default function Assessments() {
         <div className="flex items-center gap-4">
           <Dialog open={isCreateDialogOpen} onOpenChange={setIsCreateDialogOpen}>
             <DialogTrigger asChild>
-              <Button>
+              <Button className="bg-blue-600">
                 <Plus className="mr-2 h-4 w-4" />
                 Create Assessment
               </Button>
@@ -615,7 +615,7 @@ export default function Assessments() {
                           <Button 
                             variant="default" 
                             size="sm"
-                            className="h-7 text-xs"
+                            className="h-7 text-xs bg-blue-600"
                             onClick={() => setPreviewAssessment(assessment)}
                           >
                             <Eye className="mr-1 h-3 w-3" />
@@ -725,7 +725,7 @@ export default function Assessments() {
                               <Edit className="mr-2 h-4 w-4" />
                               Edit Assessment
                             </Button>
-                            <Button onClick={() => {
+                            <Button  className="bg-blue-600" onClick={() => {
                               toast({
                                 title: "Assessment scheduled",
                                 description: "Now ready to assign to candidates"
@@ -1085,7 +1085,7 @@ export default function Assessments() {
               <p className="mt-1 text-sm text-muted-foreground">
                 You dont have any assessment drafts saved. Create a new assessment to get started.
               </p>
-              <Button className="mt-4" onClick={() => setIsCreateDialogOpen(true)}>
+              <Button className="mt-4 bg-blue-600" onClick={() => setIsCreateDialogOpen(true)}>
                 <Plus className="mr-2 h-4 w-4" />
                 Create Assessment
               </Button>

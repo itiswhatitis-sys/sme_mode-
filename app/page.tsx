@@ -48,7 +48,7 @@ export default function Dashboard() {
           </p>
         </div>
         <div className="flex items-center gap-4">
-          <Button>Create Drive</Button>
+          <Button className="bg-blue-600">Create Drive</Button>
         </div>
       </div>
 

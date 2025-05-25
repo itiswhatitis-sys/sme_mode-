@@ -85,8 +85,8 @@ export default function Interboard() {
               {job.salary} <MapPin className="w-4 h-4 ml-2" /> {job.location}
             </div>
             <Link href="/interboard/viewdetails">
-  <Button className="self-start mt-2">View Details</Button>
-</Link>
+            <Button className="self-start mt-2 bg-blue-600">View Details</Button>
+          </Link>
           </div>
         ))}
       </div>

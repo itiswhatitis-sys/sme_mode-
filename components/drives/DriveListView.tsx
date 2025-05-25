@@ -87,7 +87,7 @@ export default function DriveListView({ status }: DriveListViewProps) {
         ) : (
           <div className="text-center py-8">
             <p className="text-muted-foreground mb-4">No {status} drives found.</p>
-            <Button onClick={() => {/* Create drive function would go here */}}>
+            <Button className="bg-blue-600" onClick={() => {/* Create drive function would go here */}}>
               Create New Drive
             </Button>
           </div>

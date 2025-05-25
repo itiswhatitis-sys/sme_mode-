@@ -71,8 +71,8 @@ export default function Drives() {
             </Button>
           </div>
           
-          <Button onClick={() => setCreateDriveModalOpen(true)}>
-            <Plus className="h-4 w-4 mr-2" />
+          <Button className="bg-blue-600" onClick={() => setCreateDriveModalOpen(true)}>
+            <Plus className="h-4 w-4 mr-2 " />
             Create Drive
           </Button>
         </div>

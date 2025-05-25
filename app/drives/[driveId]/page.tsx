@@ -141,7 +141,7 @@ export default function DriveDetails({ params }: DriveDetailsProps) {
             <FileText className="h-4 w-4 mr-2" />
             Export Report
           </Button>
-          <Button>
+          <Button className="bg-blue-600">
             <User className="h-4 w-4 mr-2" />
             View Candidates
           </Button>
@@ -297,6 +297,7 @@ export default function DriveDetails({ params }: DriveDetailsProps) {
                       <Button 
                         variant={round.status === 'pending' ? 'outline' : 'default'} 
                         size="sm"
+                        className="bg-blue-600"
                         disabled={round.status === 'pending'}
                       >
                         {round.status === 'completed' ? 'View Results' : 
@@ -352,7 +353,7 @@ export default function DriveDetails({ params }: DriveDetailsProps) {
                   <CardTitle className="text-lg font-medium">Candidates</CardTitle>
                   <CardDescription>All applicants for this drive</CardDescription>
                 </div>
-                <Button>
+                <Button className="bg-blue-600">
                   <FileText className="h-4 w-4 mr-2" />
                   Export
                 </Button>
